@@ -1,11 +1,4 @@
 <?xml version='1.0' encoding='utf-8'?>
 <project name="com.amplexor.imagemap-pdf">
-  <target name="dita2imagemap-pdf.init">
-    <property location="${dita.plugin.com.amplexor.imagemap-pdf.dir}/cfg" name="customization.dir" />
-    <property name="pdf2.i18n.skip" value="true" />
-    <property name="args.chapter.layout" value="BASIC" />
-    <property name="args.bookmark.style" value="COLLAPSED" />
-    <property name="args.fo.include.rellinks" value="none" />
-  </target>
-  <target depends="dita2imagemap-pdf.init, dita2pdf2" name="dita2imagemap-pdf" />
+  
 </project>

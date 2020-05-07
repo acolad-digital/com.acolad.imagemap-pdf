@@ -7,26 +7,35 @@
     xmlns:amp="http://www.amplexor.com"
     version="2.0">
 
+    <xsl:param name="imagemap.hotspot.enabled" select="'no'"/>
+
     <xsl:template match="*[contains(@class,' ut-d/imagemap ')]">
-        <xsl:variable name="attributes" as="attribute()*"><xsl:call-template name="commonattributes"/></xsl:variable>
-        <xsl:if test="exists($attributes)">
+      <xsl:choose>
+        <xsl:when test="$imagemap.hotspot.enabled = 'yes'">
+          <xsl:variable name="attributes" as="attribute()*"><xsl:call-template name="commonattributes"/></xsl:variable>
+          <xsl:if test="exists($attributes)">
             <fo:inline><xsl:sequence select="$attributes"/></fo:inline>
-        </xsl:if>
-        
-        <fo:block-container margin-left="{$side-col-width}">
+          </xsl:if>
+          
+          <fo:block-container margin-left="{$side-col-width}">
             <fo:block-container  margin="0" padding="0"><!-- reset margins -->
-                <!-- image -->
-                <fo:block>
-                    <xsl:apply-templates select="*[contains(@class,' topic/image ')]"/>
-                </fo:block> 
-                <!-- svg hotspots -->
-                <xsl:apply-templates select="*[contains(@class,' ut-d/area ')]" mode="imagemap"/>
+              <!-- image -->
+              <fo:block>
+                <xsl:apply-templates select="*[contains(@class,' topic/image ')]"/>
+              </fo:block> 
+              <!-- svg hotspots -->
+              <xsl:apply-templates select="*[contains(@class,' ut-d/area ')]" mode="imagemap"/>
             </fo:block-container>    
-        </fo:block-container>    
-        <!-- hotspots list -->
-        <fo:list-block xsl:use-attribute-sets="ol">
+          </fo:block-container>    
+          <!-- hotspots list -->
+          <fo:list-block xsl:use-attribute-sets="ol">
             <xsl:apply-templates select="*[contains(@class,' ut-d/area ')]"/>
-        </fo:list-block>
+          </fo:list-block>  
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:next-match/>
+        </xsl:otherwise>
+      </xsl:choose>  
     </xsl:template>
 
     

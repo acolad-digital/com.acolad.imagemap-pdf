@@ -1,8 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="com.amplexor.imagemap-pdf">
-  <feature extension="package.version" value="1.0.0" />
+  <feature extension="package.version" value="1.1.0" />
   <require plugin="org.dita.pdf2" />
-  <feature extension="dita.conductor.transtype.check" value="imagemap-pdf" />
-  <feature extension="dita.transtype.print" value="imagemap-pdf" />
+  
+  <feature extension="dita.xsl.xslfo" value="imagemap/ut-domain.xsl" type="file"/>  
+  <feature extension="dita.xsl.xslfo" value="imagemap/ut-domain-attr.xsl" type="file"/>  
+  <feature extension="dita.conductor.pdf2.param" value="params.xml" type="file"/>    
   <feature extension="dita.conductor.target.relative" file="integrator.xml" />
+  
+  <transtype name="pdf" desc="PDF">
+    <param name="imagemap.hotspot.enabled" desc="Enables hotspot insertion for imagemap in PDF" type="enum">
+      <val desc="No" default="true">no</val>
+      <val desc="Yes">yes</val>
+    </param>
+  </transtype>
 </plugin>
