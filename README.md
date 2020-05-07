@@ -14,7 +14,9 @@ Some limitation exists with FOP (tested with FOP 2.4): internal link between ima
 - DITA-OT 3.1 and older: run `dita --install https://github.com/Amplexor/com.amplexor.imagemap-pdf/releases/download/v1.0/com.amplexor.imagemap-pdf-v1.1.zip`
 
 ## Parameters
-* **imagemap.hotspot.enabled** set to "yes" to enable imagemap hotspot insertion in the generated PDF.
+- **imagemap.hotspot.enabled**: set to "yes" to enable imagemap hotspot insertion in the generated PDF.
+- **imagemap.hotspot.shape.color**: defines hotspot shape color. The default value is 'blue'.
+- **imagemap.hotspot.text.color**: defines hotspot text color. The default value is 'white'.
 
 
 ## Usage with Antenna House

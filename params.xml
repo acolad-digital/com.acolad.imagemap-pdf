@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension>
   <param name="imagemap.hotspot.enabled" expression="${imagemap.hotspot.enabled}" if:set="imagemap.hotspot.enabled" xmlns:if="ant:if"/>
+  <param name="imagemap.hotspot.shape.color" expression="${imagemap.hotspot.shape.color}" if:set="imagemap.hotspot.shape.color" xmlns:if="ant:if"/>
+  <param name="imagemap.hotspot.text.color" expression="${imagemap.hotspot.text.color}" if:set="imagemap.hotspot.text.color" xmlns:if="ant:if"/>
 </extension>
 

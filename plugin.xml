@@ -13,5 +13,7 @@
       <val desc="No" default="true">no</val>
       <val desc="Yes">yes</val>
     </param>
+    <param name="imagemap.hotspot.shape.color" desc="Hotspot shape color for imagemap. The default value is 'blue'." type="string"/>
+    <param name="imagemap.hotspot.text.color" desc="Hotspot text color for imagemap. The default value is 'white'." type="string"/>
   </transtype>
 </plugin>
