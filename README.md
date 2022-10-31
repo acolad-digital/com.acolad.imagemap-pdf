@@ -1,8 +1,6 @@
 # com.amplexor.imagemap-pdf
 ------------------------
 
-[![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-
 # Description
 **com.amplexor.imagemap-pdf** is a plugin for the [DITA-OT](http://dita-ot.github.io) that extends the **org.dita.pdf2** plugin to manage [DITA imagemap element](https://www.oxygenxml.com/dita/1.3/specs/langRef/base/imagemap.html) in PDF.
 
@@ -25,3 +23,8 @@ To use this plugin with Antenna House you have to change [pxpi property](https:/
 <formatter-settings pxpi="72"/>
 ```        
 
+# Warranty
+No warranty of any kind is provided. You can however open issues in the [GitHub project]() to report errors, suggest enhancements or evolutions, ask questions.
+
+# Licence
+[![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
