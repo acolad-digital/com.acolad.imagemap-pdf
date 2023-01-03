@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="com.amplexor.imagemap-pdf">
-  <feature extension="package.version" value="1.1.0" />
+  <feature extension="package.version" value="1.2.0" />
   <require plugin="org.dita.pdf2" />
   
   <feature extension="dita.xsl.xslfo" value="imagemap/ut-domain.xsl" type="file"/>  
@@ -15,5 +15,9 @@
     </param>
     <param name="imagemap.hotspot.shape.color" desc="Hotspot shape color for imagemap. The default value is 'blue'." type="string"/>
     <param name="imagemap.hotspot.text.color" desc="Hotspot text color for imagemap. The default value is 'white'." type="string"/>
+    <param name="imagemap.hotspot.legend" desc="Adds a legend of all hotspots found below the image. The default value is 'yes'."  type="enum">
+      <val desc="No">no</val>
+      <val desc="Yes" default="true">yes</val>
+    </param>
   </transtype>
 </plugin>
