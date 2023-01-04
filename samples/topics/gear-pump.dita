@@ -15,7 +15,7 @@
                 the document.</p>
             <p>
                 <imagemap id="gear_pump_map">
-                    <image href="../images/Gear_pump_exploded.png" id="gear_pump_exploded">
+                    <image href="../images/Gear_pump_exploded.png" id="gear_pump_exploded" scale="50">
                         <alt>Gear Pump</alt>
                     </image>
                     <area>
