@@ -1,15 +1,15 @@
-# com.amplexor.imagemap-pdf
+# com.acolad.imagemap-pdf
 ------------------------
 
 [![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 # Description
-**com.amplexor.imagemap-pdf** is a plugin for the [DITA-OT](http://dita-ot.github.io) that extends the **org.dita.pdf2** plugin to manage [DITA imagemap element](https://www.oxygenxml.com/dita/1.3/specs/langRef/base/imagemap.html) in PDF.
+**com.acolad.imagemap-pdf** is a plugin for the [DITA-OT](http://dita-ot.github.io) that extends the **org.dita.pdf2** plugin to manage [DITA imagemap element](https://www.oxygenxml.com/dita/1.3/specs/langRef/base/imagemap.html) in PDF.
 
 
 ## Installation
-- DITA-OT 3.2 and newer: run `dita --install com.amplexor.imagemap-pdf`
-- DITA-OT 3.1 and older: run `dita --install https://github.com/Amplexor/com.amplexor.imagemap-pdf/releases/download/v1.0/com.amplexor.imagemap-pdf-v1.1.zip`
+- DITA-OT 3.2 and newer: run `dita --install com.acolad.imagemap-pdf`
+- DITA-OT 3.1 and older: run `dita --install https://github.com/acolad-digital/com.acolad.imagemap-pdf/releases/download/v1.2/com.acolad.imagemap-pdf-v1.2.zip`
 
 ## Parameters
 - **imagemap.hotspot.enabled**: set to "yes" to enable imagemap hotspot insertion in the generated PDF.

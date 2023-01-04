@@ -3,7 +3,7 @@
   xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:opentopic-func="http://www.idiominc.com/opentopic/exsl/function"
-  xmlns:amp="http://www.amplexor.com" version="2.0" exclude-result-prefixes="amp">
+  xmlns:aco="http://www.acolad.com" version="2.0" exclude-result-prefixes="aco">
 
   <xsl:param name="imagemap.hotspot.enabled" select="'no'" />
   <xsl:param name="imagemap.hotspot.legend" select="'yes'" />
@@ -75,7 +75,7 @@
           <svg:svg height="{$height}px" width="{$width}px">
             <svg:g transform="translate({$coord-x - $radius},{$coord-y - $radius})">
               <svg:a
-                xlink:href="{amp:format.href.svg.link(*[contains(@class,' topic/xref ')]/@href)}">
+                xlink:href="{aco:format.href.svg.link(*[contains(@class,' topic/xref ')]/@href)}">
                 <!-- shape -->
                 <svg:circle cx="{$radius + $scale}px" cy="{$radius + $scale}px"
                   r="{$radius}px" xsl:use-attribute-sets="svg_shape_circle" />
@@ -113,7 +113,7 @@
       <fo:block margin="0" padding="0">
         <fo:instream-foreign-object xmlns:svg="http://www.w3.org/2000/svg">
           <svg:svg height="{$width}px" width="{$height}px">
-            <svg:a xlink:href="{amp:format.href.svg.link(*[contains(@class,' topic/xref ')]/@href)}">
+            <svg:a xlink:href="{aco:format.href.svg.link(*[contains(@class,' topic/xref ')]/@href)}">
               <!-- shape -->
               <svg:polygon
                 points="{string-join(for $i in tokenize($coord,',') return string(floor(number($i)*$scale)),',')}"
@@ -168,7 +168,7 @@
           <svg:svg height="{$width}px" width="{$height}px">
             <svg:g transform="translate({$coord-x},{$coord-y})">
               <svg:a
-                xlink:href="{amp:format.href.svg.link(*[contains(@class,' topic/xref ')]/@href)}">
+                xlink:href="{aco:format.href.svg.link(*[contains(@class,' topic/xref ')]/@href)}">
                 <!-- shape -->
                 <svg:rect width="{$rect-width}px" height="{$rect-height}px"
                   xsl:use-attribute-sets="svg_shape_rect" />
@@ -199,7 +199,7 @@
   </xsl:template>
 
   <!-- format href for svg:a element -->
-  <xsl:function name="amp:format.href.svg.link" as="xs:string">
+  <xsl:function name="aco:format.href.svg.link" as="xs:string">
     <xsl:param name="xref" as="attribute(href)" />
     <!-- a leading # is required for internal link in a svg link -->
     <xsl:sequence select="
