@@ -9,7 +9,7 @@
 
 ## Installation
 - DITA-OT 3.2 and newer: run `dita --install com.acolad.imagemap-pdf`
-- DITA-OT 3.1 and older: run `dita --install https://github.com/acolad-digital/com.acolad.imagemap-pdf/releases/download/v1.2/com.acolad.imagemap-pdf-v1.2.zip`
+- DITA-OT 3.1 and older: run `dita --install https://github.com/acolad-digital/com.acolad.imagemap-pdf/archive/refs/tags/v1.2.0.zip`
 
 ## Parameters
 - **imagemap.hotspot.enabled**: set to "yes" to enable imagemap hotspot insertion in the generated PDF.
