@@ -199,8 +199,8 @@
   </xsl:template>
 
   <!-- format href for svg:a element -->
-  <xsl:function name="aco:format.href.svg.link" as="xs:string">
-    <xsl:param name="xref" as="attribute(href)" />
+  <xsl:function name="aco:format.href.svg.link" as="xs:string?">
+    <xsl:param name="xref" as="attribute(href)?" />
     <!-- a leading # is required for internal link in a svg link -->
     <xsl:sequence select="
         if (starts-with($xref, '#')) then
