@@ -25,7 +25,7 @@ To use this plugin with Antenna House you have to change [pxpi property](https:/
 ```        
 
 ## Limitations
-Tested on DITA-OT 3.X. with Antenna House 6.6 and 7.x.
+Tested on DITA-OT 3.X and 4.X. with Antenna House Formatter V7.3 MR2
 
 Some limitation exists with FOP (tested with FOP 2.4): internal link between image map area and an `@id` on dita content doesn't work.
 
