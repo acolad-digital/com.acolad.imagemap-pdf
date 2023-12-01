@@ -50,7 +50,7 @@ jobs:
             {
               "id": "github",
               "username": "Nico-Amplexor",
-              "password": "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"              
+              "password": "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"              
             }
           ]
     - if: github.event.inputs.deploy-package == 'true'    
